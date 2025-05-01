@@ -512,5 +512,13 @@ html, body{
     transform: scale(1.2);
 }
   /* contact section end */
+
+  .project-card h4{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #eeff7e;
+    margin-top: 10px;
+  }
   /* right section end */
 /* about section end */
