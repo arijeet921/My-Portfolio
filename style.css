@@ -15,6 +15,18 @@ html, body{
     color: aliceblue !important;
     font-size: 30px;
 }
+.stickioh-navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: rgba(24, 24, 24, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+  
 .nav-link{
     color: white !important;
 }
@@ -24,6 +36,8 @@ html, body{
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 12px;
     padding: 0.5em 1rem;
+
+
 }
 
 .contact-button{
@@ -222,21 +236,30 @@ html, body{
     margin-top: 20px;
 }
 
-/* This makes each card stack its contents vertically and properly wrap */
+
 .main-tools-section .tools-card {
     display: flex;
-    align-items: center; /* Center them horizontally */
+    align-items: center;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     padding: 20px;
-    width: calc(33.333% - 13.33px); /* Fix width gap calculation */
+    width: calc(33.333% - 13.33px); 
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
     transition: transform 0.2s ease-in-out;
 }
 
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.tools-card .text-content{
+    margin-left: 20px;
+    text-align: left;
+}
 .tools-card:hover {
     transform: scale(1.05);
 }
@@ -245,23 +268,178 @@ html, body{
     width: 40px;
     height: 40px;
     object-fit: contain;
-    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2); 
+    padding: 5px;
+    border-radius: 5px;
+
 }
 
 .tools-card h4 {
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 5px;
-    text-align: center;
+    color: #ffffff;
 }
 
 .tools-card p {
     font-size: 14px;
     color: #666;
     margin-bottom: 0;
-    text-align: center;
+    color: #ffffff;
+    
+}
+@media (max-width: 576px) {
+    .main-tools-section .tools-card {
+        width: 100%;
+        flex-direction: column; 
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .text-content h4,
+    .text-content p {
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .tools-card img {
+        margin-bottom: 10px;
+    }
+}
+
+/* toolss i used section end */
+
+/* about section start */
+
+.about-card {
+    padding: 16px;
+    background-color: rgba(255, 223, 223, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    font-size: 14px;
+    color: #ffffff;
+    margin-top: 1rem;
+    /* width: 80%; */
+}
+  .card h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .description {
+    margin: 0 0 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+    color: #ffffff;
+  }
+  
+  .info-row {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+  
+  .info-row .icon {
+    margin-right: 8px;
+    font-size: 16px;
+  }
+  
+  .info-row a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .info-row a:hover {
+    text-decoration: underline;
+  }
+  
+
+  /* right section start */
+
+  .custom-pills .nav-link {
+    color: #333;
+    background-color: transparent;
+    border-radius: 0;
+    padding: 12px 50px;
+    font-weight: 500;
+    position: relative;
+    
+ 
+  }
+  @media (max-width: 576px) {
+    .custom-pills .nav-link {
+        padding: 8px 16px; /* Reduced padding for mobile screens */
+    }
+}
+  .tab-sec{
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .custom-pills .nav-item {
+  margin: 0 auto;
 }
 
 
 
-/* toolss i used section end */
+  .custom-pills .nav-link.active {
+    background-color: rgba(128, 128, 128, 0.1); /* light background */
+    color: #000;
+  }
+  
+  .custom-pills .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    width: 60%;
+    height: 2px;
+    background-color: #5A4FCF; /* your purple underline */
+    border-radius: 4px;
+  }
+  
+
+  /* project-section start */
+
+  .experience-item {
+    padding: 15px 0;
+  }
+  
+  .job-title {
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0;
+    color: #ffffff;
+  }
+  
+  .company-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 2px 0 3px 0;
+  }
+  
+  .job-description {
+    font-size: 0.75rem;
+    margin: 0;
+    color: #ffffff;
+   
+  }
+  .duration {
+    font-size: 0.75rem;
+    color: #eeff7e;
+    margin-bottom:6px;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 12px 0;
+  }
+  /* Project section end */
+  
+  /* right section end */
+/* about section end */
